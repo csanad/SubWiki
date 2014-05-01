@@ -21,7 +21,7 @@ function e($dirty) {
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/prettify.css">
         <link rel="stylesheet" href="static/css/codemirror.css">
-        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/<?php echo e(CSS) ?>">
 
         <meta name="description" content="<?php echo e($page['description']) ?>">
         <meta name="keywords" content="<?php echo e(join(',', $page['tags'])) ?>">
@@ -36,17 +36,19 @@ function e($dirty) {
     </head>
 <body>
     <div id="main">
-        <a href="http://wikitten.vizuina.com" id="logo" target="_blank" class="hidden-phone">
-            <img src="static/img/logo.png" alt="">
-            <div class="bubble">Remember to check for updates!</div>
-        </a>
+        <?php if(USE_WIKITTEN_LOGO): ?>
+            <a href="http://wikitten.vizuina.com" id="logo" target="_blank" class="hidden-phone">
+                <img src="static/img/logo.png" alt="">
+                <div class="bubble">Remember to check for updates!</div>
+            </a>
+        <?php endif; ?>
         <div class="inner">
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span3">
                         <div id="sidebar">
                             <div class="inner">
-                                <h2><span><?php echo e(APP_NAME) ?></span></h2>
+                                <h2><span><a style="color:#000000;text-decoration:none;" href="<?php echo BASE_URL; ?>"><?php echo e(APP_NAME) ?></a></span></h2>
                                 <?php include('tree.php') ?>
                             </div>
                         </div>
@@ -63,11 +65,13 @@ function e($dirty) {
         </div>
     </div>
     <script>
+    <?php if(USE_WIKITTEN_LOGO): ?>
         $(document).ready(function () {
             $('#logo').delay(2000).animate({
                 left: '20px'
             }, 600);
         });
+    <?php endif; ?>
     </script>
 </body>
 </html>

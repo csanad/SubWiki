@@ -5,6 +5,9 @@
 // Custom name for your wiki:
 define('APP_NAME', 'My Wiki');
 
+// Choose a css theme:
+define('CSS', 'default.css');
+
 // Custom path to your wiki's library:
 // define('LIBRARY', '/path/to/wiki/library');
 
@@ -13,9 +16,19 @@ define('APP_NAME', 'My Wiki');
 // who does what is your responsibility.
 // define('ENABLE_EDITING', true);
 
+// Enable create file if not exists
+// define('ENABLE_CREATING', true);
+
 // Enable JSON page data?
 // define('USE_PAGE_METADATA', true);
+// define('USE_WIKITTEN_LOGO', true);
 // 
 // Enable PasteBin plugin ?
 // define('ENABLE_PASTEBIN', true);
 // define('PASTEBIN_API_KEY', '');
+
+// Enable Authentication?
+// define('ENABLE_AUTH', true);
+// define('USER', 'admin');
+// define('PASSWORD', 'password');
+
