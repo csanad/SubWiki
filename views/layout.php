@@ -19,7 +19,7 @@ function e($dirty) {
 
         <link rel="shortcut icon" href="static/img/favicon.ico">
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/css/prettify.css">
+        <!--<link rel="stylesheet" href="static/css/prettify.css">-->
         <link rel="stylesheet" href="static/css/codemirror.css">
         <link rel="stylesheet" href="static/css/<?php echo e(CSS) ?>">
 
@@ -31,7 +31,8 @@ function e($dirty) {
         <?php endif; ?>
 
         <script src="static/js/jquery.min.js"></script>
-        <script src="static/js/prettify.js"></script>
+        <!--<script src="static/js/prettify.js"></script>-->
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
         <script src="static/js/codemirror.min.js"></script>
     </head>
 <body>
